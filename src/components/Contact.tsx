@@ -1,0 +1,161 @@
+
+import { useState } from "react";
+import { Mail, MessageSquare, Github, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+
+export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", company: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
+  return (
+    <section id="contact" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to start your next project? Let's discuss how we can help bring your ideas to life.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Work Together</h3>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Whether you need a complete web application, mobile app, or technical consultation, 
+              we're here to help. Send us a message and we'll get back to you within 24 hours.
+            </p>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center">
+                <Mail className="text-blue-600 mr-4" size={20} />
+                <span className="text-gray-700">hello@verto.dev</span>
+              </div>
+              <div className="flex items-center">
+                <MessageSquare className="text-blue-600 mr-4" size={20} />
+                <span className="text-gray-700">Available for immediate consultation</span>
+              </div>
+            </div>
+
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="#"
+                className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Name *
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email *
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  Company
+                </label>
+                <Input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Message *
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
