@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -16,7 +15,7 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-4xl">
-      <div className="bg-white/90 backdrop-blur-md rounded-full border border-gray-100 shadow-lg px-6 py-4">
+      <div className="bg-white/70 backdrop-blur-md rounded-full border border-gray-100 shadow-lg px-6 py-4">
         <div className="flex items-center justify-between">
           <a 
             href="#home" 
