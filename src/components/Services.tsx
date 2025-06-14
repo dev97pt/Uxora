@@ -1,4 +1,3 @@
-
 import { Briefcase } from "lucide-react";
 
 export const Services = () => {
@@ -17,16 +16,6 @@ export const Services = () => {
       title: "Backend Development",
       description: "Scalable server-side solutions and API development",
       features: ["RESTful APIs", "GraphQL", "Microservices", "Database Design"]
-    },
-    {
-      title: "Cloud & DevOps",
-      description: "Cloud infrastructure setup, deployment, and automation",
-      features: ["AWS/Azure/GCP", "CI/CD Pipelines", "Container Orchestration", "Monitoring & Analytics"]
-    },
-    {
-      title: "Automation",
-      description: "Process automation and workflow optimization solutions",
-      features: ["Business Process Automation", "Data Processing", "Integration Solutions", "Custom Scripts"]
     },
     {
       title: "Consulting",
