@@ -33,9 +33,6 @@ export const Hero = () => {
               Get in touch
             </a>
           </div>
-          <div className="text-sm text-gray-500 font-light">
-            Osmar Graça & Ricardo Pilartes
-          </div>
         </div>
       </div>
     </section>
