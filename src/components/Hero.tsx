@@ -28,7 +28,7 @@ export const Hero = () => {
             </a>
             <a
               href="#contact"
-              className="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium"
+              className="text-gray-700 hover:text-gray-900 transition-colors duration-300 font-medium px-8 py-4 rounded-full border border-gray-300 hover:border-gray-400"
             >
               Get in touch
             </a>
