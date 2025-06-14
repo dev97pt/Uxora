@@ -12,11 +12,11 @@ export const Hero = () => {
       <div className="container mx-auto px-6 text-left relative z-10">
         <div className="max-w-4xl animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-            We build websites
+            Verto is a global
             <br />
-            and applications
+            web design and UX
             <br />
-            <span className="text-gray-600 font-normal">that work</span>
+            <span className="text-gray-600 font-normal">agency</span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-6 items-start mb-20">
             <a
