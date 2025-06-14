@@ -33,18 +33,22 @@ export const BookingForm = () => {
     setSelectedTime("");
     
     if (date) {
-      const { data: bookings } = await supabase
-        .from('bookings')
-        .select('meeting_datetime')
-        .gte('meeting_datetime', format(date, 'yyyy-MM-dd'))
-        .lt('meeting_datetime', format(addDays(date, 1), 'yyyy-MM-dd'))
-        .eq('status', 'confirmed');
-      
-      if (bookings) {
-        const bookedTimes = bookings.map(booking => 
-          format(new Date(booking.meeting_datetime), 'HH:mm')
-        );
-        setBookedSlots(bookedTimes);
+      try {
+        const { data: bookings } = await supabase
+          .from('bookings' as any)
+          .select('meeting_datetime')
+          .gte('meeting_datetime', format(date, 'yyyy-MM-dd'))
+          .lt('meeting_datetime', format(addDays(date, 1), 'yyyy-MM-dd'))
+          .eq('status', 'confirmed');
+        
+        if (bookings) {
+          const bookedTimes = bookings.map((booking: any) => 
+            format(new Date(booking.meeting_datetime), 'HH:mm')
+          );
+          setBookedSlots(bookedTimes);
+        }
+      } catch (error) {
+        console.error('Error fetching bookings:', error);
       }
     }
   };
@@ -68,7 +72,7 @@ export const BookingForm = () => {
 
       // Insert booking into database
       const { data, error } = await supabase
-        .from('bookings')
+        .from('bookings' as any)
         .insert({
           name: formData.name,
           email: formData.email,
@@ -76,26 +80,28 @@ export const BookingForm = () => {
           message: formData.message,
           meeting_datetime: meetingDateTime.toISOString(),
           status: 'pending'
-        })
+        } as any)
         .select()
         .single();
 
       if (error) throw error;
 
       // Call edge function to create Google Calendar event
-      const { error: calendarError } = await supabase.functions.invoke('create-calendar-event', {
-        body: {
-          bookingId: data.id,
-          name: formData.name,
-          email: formData.email,
-          datetime: meetingDateTime.toISOString(),
-          message: formData.message
-        }
-      });
+      if (data) {
+        const { error: calendarError } = await supabase.functions.invoke('create-calendar-event', {
+          body: {
+            bookingId: data.id,
+            name: formData.name,
+            email: formData.email,
+            datetime: meetingDateTime.toISOString(),
+            message: formData.message
+          }
+        });
 
-      if (calendarError) {
-        console.error('Calendar error:', calendarError);
-        // Still show success as booking was created
+        if (calendarError) {
+          console.error('Calendar error:', calendarError);
+          // Still show success as booking was created
+        }
       }
 
       toast({
