@@ -41,7 +41,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
-        <p><em>This message was sent from the Verto contact form.</em></p>
+        <p><em>This message was sent from the Uxora contact form.</em></p>
       `,
     });
 

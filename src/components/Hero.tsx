@@ -12,7 +12,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 text-left relative z-10">
         <div className="max-w-4xl animate-fade-in">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight">
-            Verto is a global
+            Uxora is a global
             <br />
             web design and UX
             <br />
