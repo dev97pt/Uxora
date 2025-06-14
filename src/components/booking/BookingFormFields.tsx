@@ -29,8 +29,8 @@ export const BookingFormFields = ({
   onSubmit
 }: BookingFormFieldsProps) => {
   return (
-    <div className="bg-gray-50 p-8 rounded-xl">
-      <form onSubmit={onSubmit} className="space-y-6">
+    <div className="bg-gray-50 p-6 sm:p-8 rounded-xl">
+      <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
             Full Name *
@@ -41,6 +41,7 @@ export const BookingFormFields = ({
             value={formData.name}
             onChange={(e) => onFormDataChange({ ...formData, name: e.target.value })}
             placeholder="Your full name"
+            className="text-sm sm:text-base"
           />
         </div>
 
@@ -55,6 +56,7 @@ export const BookingFormFields = ({
             value={formData.email}
             onChange={(e) => onFormDataChange({ ...formData, email: e.target.value })}
             placeholder="your@email.com"
+            className="text-sm sm:text-base"
           />
         </div>
 
@@ -68,6 +70,7 @@ export const BookingFormFields = ({
             value={formData.phone}
             onChange={(e) => onFormDataChange({ ...formData, phone: e.target.value })}
             placeholder="+1 (555) 123-4567"
+            className="text-sm sm:text-base"
           />
         </div>
 
@@ -81,12 +84,13 @@ export const BookingFormFields = ({
             onChange={(e) => onFormDataChange({ ...formData, message: e.target.value })}
             rows={4}
             placeholder="Tell us about your project..."
+            className="text-sm sm:text-base resize-none"
           />
         </div>
 
         {selectedDate && selectedTime && (
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="text-sm text-blue-800">
+          <div className="bg-blue-50 p-3 sm:p-4 rounded-lg">
+            <p className="text-xs sm:text-sm text-blue-800">
               <strong>Selected:</strong> {format(selectedDate, 'MMMM d, yyyy')} at {selectedTime}
             </p>
           </div>
@@ -95,7 +99,7 @@ export const BookingFormFields = ({
         <Button
           type="submit"
           disabled={isSubmitting || !selectedDate || !selectedTime}
-          className="w-full bg-blue-600 hover:bg-blue-700"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-sm sm:text-base py-2 sm:py-3"
         >
           {isSubmitting ? "Booking..." : "Book Discovery Call"}
         </Button>

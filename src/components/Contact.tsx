@@ -39,53 +39,53 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section id="contact" className="py-16 sm:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Ready to start your next project? Let's discuss how we can help bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Work Together</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
+          <div className="order-2 lg:order-1">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Let's Work Together</h3>
+            <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Whether you need a complete web application, mobile app, or technical consultation, 
               we're here to help. Send us a message and we'll get back to you within 24 hours.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               <div className="flex items-center">
-                <Mail className="text-blue-600 mr-4" size={20} />
-                <span className="text-gray-700">hello@verto.dev</span>
+                <Mail className="text-blue-600 mr-3 sm:mr-4" size={18} />
+                <span className="text-gray-700 text-sm sm:text-base">hello@verto.dev</span>
               </div>
               <div className="flex items-center">
-                <MessageSquare className="text-blue-600 mr-4" size={20} />
-                <span className="text-gray-700">Available for immediate consultation</span>
+                <MessageSquare className="text-blue-600 mr-3 sm:mr-4" size={18} />
+                <span className="text-gray-700 text-sm sm:text-base">Available for immediate consultation</span>
               </div>
             </div>
 
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white p-2 sm:p-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <Github size={20} />
+                <Github size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a
                 href="#"
-                className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white p-2 sm:p-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} className="sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 order-1 lg:order-2">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Name *
@@ -98,6 +98,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your full name"
+                    className="text-sm sm:text-base"
                   />
                 </div>
                 <div>
@@ -112,6 +113,7 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
+                    className="text-sm sm:text-base"
                   />
                 </div>
               </div>
@@ -127,6 +129,7 @@ export const Contact = () => {
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Your company name"
+                  className="text-sm sm:text-base"
                 />
               </div>
 
@@ -140,15 +143,16 @@ export const Contact = () => {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  rows={5}
+                  rows={4}
                   placeholder="Tell us about your project..."
+                  className="text-sm sm:text-base resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 sm:py-3 text-sm sm:text-lg"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

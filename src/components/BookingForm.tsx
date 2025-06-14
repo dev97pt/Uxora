@@ -98,19 +98,19 @@ export const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Book a Discovery Call</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section id="booking" className="py-16 sm:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Book a Discovery Call</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Schedule a 30-minute discovery call to discuss your project needs. Available Monday to Friday, 12 PM - 6 PM.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Calendar Section */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <DateSelector
                 selectedDate={selectedDate}
                 onDateSelect={handleDateSelect}
