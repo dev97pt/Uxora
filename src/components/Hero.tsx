@@ -1,33 +1,39 @@
-import { ArrowDown } from "lucide-react";
+
+import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white pt-20">
       <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            We Create <span className="text-blue-600">Websites</span> & <span className="text-blue-600">Applications</span>
+        <div className="max-w-5xl mx-auto animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-bold text-gray-900 mb-8 leading-[0.9] tracking-tight">
+            We create
+            <br />
+            <span className="text-blue-600">digital experiences</span>
+            <br />
+            that work
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-            Custom web development and software solutions for your business
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
+            Custom websites, web applications, and mobile apps built by 
+            two experienced software engineers who care about quality.
           </p>
-          <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
-            Osmar Graça and Ricardo Pilartes - two software engineers who build 
-            modern websites, web applications, and mobile apps that work.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
             <a
               href="#portfolio"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105"
+              className="group bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
-              View Our Work
+              View our work
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
             </a>
             <a
               href="#contact"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200 transform hover:scale-105"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium"
             >
-              Get In Touch
+              Get in touch
             </a>
+          </div>
+          <div className="text-sm text-gray-500 font-light">
+            Osmar Graça & Ricardo Pilartes
           </div>
         </div>
       </div>
