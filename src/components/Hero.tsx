@@ -18,9 +18,6 @@ export const Hero = () => {
             <br />
             <span className="text-gray-600 font-normal">that work</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl font-light">
-            Custom digital solutions built by two experienced software engineers who care about quality and user experience.
-          </p>
           <div className="flex flex-col sm:flex-row gap-6 items-start mb-20">
             <a
               href="#portfolio"
