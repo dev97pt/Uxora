@@ -30,9 +30,6 @@ export const Hero = () => {
               Get In Touch
             </a>
           </div>
-          <div className="animate-bounce">
-            <ArrowDown className="mx-auto text-blue-600" size={32} />
-          </div>
         </div>
       </div>
     </section>
