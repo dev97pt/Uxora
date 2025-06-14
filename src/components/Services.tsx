@@ -1,3 +1,4 @@
+
 import { Briefcase } from "lucide-react";
 
 export const Services = () => {
@@ -6,16 +7,6 @@ export const Services = () => {
       title: "Web Development",
       description: "Custom web applications built with modern frameworks and best practices",
       features: ["React & Next.js", "Progressive Web Apps", "E-commerce Solutions", "CMS Development"]
-    },
-    {
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications for iOS and Android",
-      features: ["React Native", "Flutter", "Native iOS/Android", "App Store Deployment"]
-    },
-    {
-      title: "Backend Development",
-      description: "Scalable server-side solutions and API development",
-      features: ["RESTful APIs", "GraphQL", "Microservices", "Database Design"]
     },
     {
       title: "Consulting",
