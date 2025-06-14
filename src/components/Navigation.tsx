@@ -17,7 +17,12 @@ export const Navigation = () => {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">verto</div>
+          <a 
+            href="#home" 
+            className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors duration-200"
+          >
+            verto
+          </a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
