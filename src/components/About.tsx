@@ -1,9 +1,6 @@
-
 import { User, CheckCircle } from "lucide-react";
-
 export const About = () => {
-  return (
-    <section id="about" className="py-20 bg-white">
+  return <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Us</h2>
@@ -18,7 +15,7 @@ export const About = () => {
               <div className="bg-blue-100 p-3 rounded-full mr-4">
                 <User className="text-blue-600" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">🧑‍💻 Osmar Graça</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Osmar Graça</h3>
             </div>
             <div className="mb-6">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">What I do</h4>
@@ -39,7 +36,7 @@ export const About = () => {
               <div className="bg-blue-100 p-3 rounded-full mr-4">
                 <User className="text-blue-600" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">🧑‍💻 Ricardo Pilartes</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Ricardo Pilartes</h3>
             </div>
             <div className="mb-6">
               <h4 className="text-lg font-semibold text-gray-800 mb-3">What I do</h4>
@@ -79,6 +76,5 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
