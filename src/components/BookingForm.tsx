@@ -35,14 +35,14 @@ export const BookingForm = () => {
     if (date) {
       try {
         const { data: bookings } = await supabase
-          .from('bookings' as any)
+          .from('bookings')
           .select('meeting_datetime')
           .gte('meeting_datetime', format(date, 'yyyy-MM-dd'))
           .lt('meeting_datetime', format(addDays(date, 1), 'yyyy-MM-dd'))
           .eq('status', 'confirmed');
         
         if (bookings) {
-          const bookedTimes = bookings.map((booking: any) => 
+          const bookedTimes = bookings.map(booking => 
             format(new Date(booking.meeting_datetime), 'HH:mm')
           );
           setBookedSlots(bookedTimes);
@@ -72,7 +72,7 @@ export const BookingForm = () => {
 
       // Insert booking into database
       const { data, error } = await supabase
-        .from('bookings' as any)
+        .from('bookings')
         .insert({
           name: formData.name,
           email: formData.email,
@@ -80,7 +80,7 @@ export const BookingForm = () => {
           message: formData.message,
           meeting_datetime: meetingDateTime.toISOString(),
           status: 'pending'
-        } as any)
+        })
         .select()
         .single();
 
