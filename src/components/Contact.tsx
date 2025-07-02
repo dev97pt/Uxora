@@ -89,20 +89,6 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="bg-blue-600 text-white p-2 sm:p-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Github size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a
-                href="#"
-                className="bg-blue-600 text-white p-2 sm:p-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Linkedin size={18} className="sm:w-5 sm:h-5" />
-              </a>
-            </div>
           </div>
 
           <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 order-1 lg:order-2">
