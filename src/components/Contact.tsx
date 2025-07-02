@@ -81,7 +81,7 @@ export const Contact = () => {
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               <div className="flex items-center">
                 <Mail className="text-blue-600 mr-3 sm:mr-4" size={18} />
-                <span className="text-gray-700 text-sm sm:text-base">developerpt1997@gmail.com</span>
+                <span className="text-gray-700 text-sm sm:text-base">general.uxora@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <MessageSquare className="text-blue-600 mr-3 sm:mr-4" size={18} />
