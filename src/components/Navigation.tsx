@@ -44,10 +44,10 @@ export const Navigation = () => {
       isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
     }`}>
       <div className="bg-white/70 backdrop-blur-md rounded-full border border-gray-100 shadow-lg px-4 sm:px-6 py-3 sm:py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:justify-between relative">
           <a 
             href="#home" 
-            className="text-xl sm:text-2xl font-bold text-black"
+            className="text-xl sm:text-2xl font-bold text-black lg:static absolute left-1/2 transform -translate-x-1/2 lg:transform-none"
           >
             Uxora
           </a>
@@ -67,7 +67,7 @@ export const Navigation = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="lg:hidden p-1"
+            className="lg:hidden p-1 relative z-10"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
