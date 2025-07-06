@@ -7,14 +7,12 @@ export const Portfolio = () => {
       title: "Bill Generator",
       description: "Professional invoice and bill generation system with automated calculations and PDF export capabilities.",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop",
-      tech: ["React", "TypeScript", "PDF.js", "Tailwind CSS"],
       live: "https://billify-generator-6057.vercel.app"
     },
     {
       title: "Event Organiser",
       description: "Comprehensive event management platform for organizing, tracking, and managing events efficiently.",
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop",
-      tech: ["React", "Next.js", "TypeScript", "Supabase"],
       live: "https://clean-event-space.vercel.app"
     }
   ];
@@ -55,16 +53,6 @@ export const Portfolio = () => {
               <div className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">{project.description}</p>
-                <div className="flex flex-wrap gap-1 sm:gap-2">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-blue-100 text-blue-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           ))}
