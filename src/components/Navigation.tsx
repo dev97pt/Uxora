@@ -35,7 +35,6 @@ export const Navigation = () => {
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Book Meeting", href: "#booking" },
     { name: "Contact", href: "#contact" },
   ];
 
