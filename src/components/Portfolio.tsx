@@ -14,6 +14,12 @@ export const Portfolio = () => {
       description: "Comprehensive event management platform for organizing, tracking, and managing events efficiently.",
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=300&fit=crop",
       live: "https://clean-event-space.vercel.app"
+    },
+    {
+      title: "Kings n Company",
+      description: "Professional real estate company website providing comprehensive property information and services.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop",
+      live: "https://kingsncompany.com"
     }
   ];
 
