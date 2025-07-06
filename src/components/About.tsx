@@ -12,47 +12,23 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto mb-12 sm:mb-16">
-          <div className="bg-gray-50 p-6 sm:p-8 rounded-xl hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <User className="text-blue-600" size={24} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Osmar Graça</h3>
-            </div>
-            <div className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">What I do</h4>
-              <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I'm a web developer focused on creating clean, modern websites that help businesses grow online. I've built websites for different industries and always aim to make them fast, easy to use, and visually appealing.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">My approach</h4>
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                I care about the details and enjoy finding smart solutions that work. My goal is to build tools that people can count on.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gray-50 p-6 sm:p-8 rounded-xl hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <User className="text-blue-600" size={24} />
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Ricardo Pilartes</h3>
-            </div>
-            <div className="mb-6">
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">What I do</h4>
-              <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I'm a backend developer who helps turn ideas into solid, reliable websites. I make sure everything works smoothly behind the scenes — from setting up databases to making websites secure and efficient.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-gray-800 mb-3">My approach</h4>
-              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                My goal is to build tools that people can count on, focusing on reliability, quality, and performance.
-              </p>
-            </div>
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16">
+          <div className="bg-gray-50 p-8 sm:p-10 rounded-xl text-center">
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
+              At <span className="font-semibold text-gray-900">Uxora</span>, we specialise in web development and design that brings brands to life online.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
+              Based in Lisbon and working with clients across the globe, we deliver tailored digital solutions that combine clean design, solid code, and smart strategy.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
+              From responsive websites to custom-built platforms, we create seamless user experiences that not only look great but also perform exceptionally.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
+              Our approach is 360° — we take care of everything from concept to deployment, always staying ahead of the curve with the latest technologies and design trends.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+              Whether you're launching a new idea or scaling an existing business, <span className="font-semibold text-gray-900">Uxora</span> is your trusted partner for building a strong and modern digital presence.
+            </p>
           </div>
         </div>
 
