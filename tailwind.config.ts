@@ -98,14 +98,47 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				aurora: {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%",
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				aurora: "aurora 60s linear infinite"
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		function ({ addBase, theme }: any) {
+			function extractColorVars(colorObj: Record<string, any>, colorGroup = ''): Record<string, string> {
+				return Object.keys(colorObj).reduce((vars, colorKey) => {
+					const value = colorObj[colorKey];
+					const cssVariable = colorGroup ? `--${colorGroup}-${colorKey}` : `--${colorKey}`;
+
+					if (typeof value === 'string') {
+						return { ...vars, [cssVariable]: value };
+					}
+
+					if (typeof value === 'object') {
+						return { ...vars, ...extractColorVars(value, colorKey) };
+					}
+
+					return vars;
+				}, {});
+			}
+
+			addBase({
+				':root': extractColorVars(theme('colors')),
+			});
+		},
+	],
 } satisfies Config;
