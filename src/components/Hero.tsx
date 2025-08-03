@@ -24,6 +24,8 @@ function Hero() {
 
   return (
     <AuroraBackground>
+      {/* Gradient overlay to fade to white */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none z-5"></div>
       <div className="container mx-auto relative z-10">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
           <div>
